@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="428" id="KGk-i7-Jjw" customClass="ProjectCardTableViewCell" customModule="GiveMeGreen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="399"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="398.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="9jz-7o-07R">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="9jz-7o-07R" secondAttribute="height" multiplier="1:1" id="JPl-7b-xmD"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3E-wi-Imt">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpk-vh-5rR">
+                                <rect key="frame" x="8" y="8" width="284" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.30210167253521125" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xpk-vh-5rR" secondAttribute="trailing" constant="8" id="4Ip-Vf-Gli"/>
+                            <constraint firstAttribute="height" constant="40" id="JCY-im-6K3"/>
+                            <constraint firstItem="xpk-vh-5rR" firstAttribute="leading" secondItem="S3E-wi-Imt" secondAttribute="leading" constant="8" id="U7i-UM-cEH"/>
+                            <constraint firstItem="xpk-vh-5rR" firstAttribute="top" secondItem="S3E-wi-Imt" secondAttribute="top" constant="8" id="sML-UT-hgp"/>
+                        </constraints>
+                    </view>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RLS-zT-MLm">
+                        <rect key="frame" x="8" y="348" width="284" height="2"/>
+                    </progressView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3B-ml-rE4">
+                        <rect key="frame" x="8" y="358" width="45" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00 of $0.00 funded" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeE-fI-Z3e">
+                        <rect key="frame" x="8" y="308" width="173" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="S3E-wi-Imt" secondAttribute="trailing" id="2eZ-VC-kb4"/>
+                    <constraint firstItem="S3E-wi-Imt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8er-Vs-IsM"/>
+                    <constraint firstItem="RLS-zT-MLm" firstAttribute="top" secondItem="jeE-fI-Z3e" secondAttribute="bottom" constant="19" id="9pu-eR-HgY"/>
+                    <constraint firstItem="RLS-zT-MLm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="CVR-5C-9Wz"/>
+                    <constraint firstItem="S3E-wi-Imt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Lhx-LR-DR2"/>
+                    <constraint firstItem="9jz-7o-07R" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="PQQ-Cr-arK"/>
+                    <constraint firstItem="RLS-zT-MLm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="SEL-Fy-Pj0"/>
+                    <constraint firstItem="jeE-fI-Z3e" firstAttribute="top" secondItem="9jz-7o-07R" secondAttribute="bottom" constant="8" id="af1-n0-UQ3"/>
+                    <constraint firstItem="W3B-ml-rE4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="bgX-Zj-Q54"/>
+                    <constraint firstAttribute="trailing" secondItem="9jz-7o-07R" secondAttribute="trailing" id="fjg-JY-fg9"/>
+                    <constraint firstItem="RLS-zT-MLm" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="g1R-qo-yRa"/>
+                    <constraint firstItem="jeE-fI-Z3e" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="lJp-Su-QmN"/>
+                    <constraint firstItem="W3B-ml-rE4" firstAttribute="top" secondItem="RLS-zT-MLm" secondAttribute="bottom" constant="8" id="xjP-R9-nG0"/>
+                    <constraint firstItem="9jz-7o-07R" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zaB-BU-k2v"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="34" y="238.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="photo" width="2048" height="2048"/>
+    </resources>
+</document>

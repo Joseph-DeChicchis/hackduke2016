@@ -1,0 +1,15 @@
+PODS:
+  - MDCSwipeToChoose (0.2.3)
+  - ZLSwipeableViewSwift (0.0.7)
+
+DEPENDENCIES:
+  - MDCSwipeToChoose
+  - ZLSwipeableViewSwift
+
+SPEC CHECKSUMS:
+  MDCSwipeToChoose: 56239d98b4558c66e7c3c9069482befd26092270
+  ZLSwipeableViewSwift: f5ee94c2e4220f900f5a129118af2aef23062900
+
+PODFILE CHECKSUM: 889588a9f1929b0b8326eeafca94479ade5dbce1
+
+COCOAPODS: 1.0.1

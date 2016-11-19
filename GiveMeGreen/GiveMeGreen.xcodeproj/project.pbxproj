@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		124D3E91FBE92309A9AA4644 /* Pods_GiveMeGreen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 960207FA0FCEDDCA8D00FBC1 /* Pods_GiveMeGreen.framework */; };
+		274627EDBA1087AC2CF3091E /* Pods_GiveMeGreenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E7858F320EA294821B00DB /* Pods_GiveMeGreenTests.framework */; };
 		EB25F72D1DE0EC1D003372A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB25F72C1DE0EC1D003372A6 /* AppDelegate.swift */; };
 		EB25F72F1DE0EC1D003372A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB25F72E1DE0EC1D003372A6 /* ViewController.swift */; };
 		EB25F7321DE0EC1D003372A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB25F7301DE0EC1D003372A6 /* Main.storyboard */; };
@@ -14,6 +16,9 @@
 		EB25F7371DE0EC1D003372A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB25F7351DE0EC1D003372A6 /* LaunchScreen.storyboard */; };
 		EB25F7421DE0EC1D003372A6 /* GiveMeGreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB25F7411DE0EC1D003372A6 /* GiveMeGreenTests.swift */; };
 		EB25F74D1DE0EC1D003372A6 /* GiveMeGreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB25F74C1DE0EC1D003372A6 /* GiveMeGreenUITests.swift */; };
+		EBDB89481DE103BC004CC927 /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDB89471DE103BC004CC927 /* ProjectCardView.swift */; };
+		EBDB894D1DE10D92004CC927 /* ProjectCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDB894B1DE10D92004CC927 /* ProjectCardTableViewCell.swift */; };
+		EBDB894E1DE10D92004CC927 /* ProjectCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDB894C1DE10D92004CC927 /* ProjectCardTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02E7858F320EA294821B00DB /* Pods_GiveMeGreenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GiveMeGreenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE1811A7492FB3B4E4FCCB3 /* Pods-GiveMeGreenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiveMeGreenTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GiveMeGreenTests/Pods-GiveMeGreenTests.release.xcconfig"; sourceTree = "<group>"; };
+		960207FA0FCEDDCA8D00FBC1 /* Pods_GiveMeGreen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GiveMeGreen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D062E7CB62A739CAAAF1A1FE /* Pods-GiveMeGreenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiveMeGreenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GiveMeGreenTests/Pods-GiveMeGreenTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D8CFA391F97A9F683F44A445 /* Pods-GiveMeGreen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiveMeGreen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GiveMeGreen/Pods-GiveMeGreen.debug.xcconfig"; sourceTree = "<group>"; };
 		EB25F7291DE0EC1D003372A6 /* GiveMeGreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiveMeGreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB25F72C1DE0EC1D003372A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB25F72E1DE0EC1D003372A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +57,10 @@
 		EB25F7481DE0EC1D003372A6 /* GiveMeGreenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiveMeGreenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB25F74C1DE0EC1D003372A6 /* GiveMeGreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveMeGreenUITests.swift; sourceTree = "<group>"; };
 		EB25F74E1DE0EC1D003372A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBDB89471DE103BC004CC927 /* ProjectCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
+		EBDB894B1DE10D92004CC927 /* ProjectCardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCardTableViewCell.swift; sourceTree = "<group>"; };
+		EBDB894C1DE10D92004CC927 /* ProjectCardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectCardTableViewCell.xib; sourceTree = "<group>"; };
+		FD8532DC5187870A9E72BA16 /* Pods-GiveMeGreen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiveMeGreen.release.xcconfig"; path = "Pods/Target Support Files/Pods-GiveMeGreen/Pods-GiveMeGreen.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				124D3E91FBE92309A9AA4644 /* Pods_GiveMeGreen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				274627EDBA1087AC2CF3091E /* Pods_GiveMeGreenTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +90,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FC4CEAF479BEE5B3A3C71E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8CFA391F97A9F683F44A445 /* Pods-GiveMeGreen.debug.xcconfig */,
+				FD8532DC5187870A9E72BA16 /* Pods-GiveMeGreen.release.xcconfig */,
+				D062E7CB62A739CAAAF1A1FE /* Pods-GiveMeGreenTests.debug.xcconfig */,
+				3DE1811A7492FB3B4E4FCCB3 /* Pods-GiveMeGreenTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A4C04B13D14549965494D70F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				960207FA0FCEDDCA8D00FBC1 /* Pods_GiveMeGreen.framework */,
+				02E7858F320EA294821B00DB /* Pods_GiveMeGreenTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EB25F7201DE0EC1D003372A6 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +117,8 @@
 				EB25F7401DE0EC1D003372A6 /* GiveMeGreenTests */,
 				EB25F74B1DE0EC1D003372A6 /* GiveMeGreenUITests */,
 				EB25F72A1DE0EC1D003372A6 /* Products */,
+				0FC4CEAF479BEE5B3A3C71E0 /* Pods */,
+				A4C04B13D14549965494D70F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +137,9 @@
 			children = (
 				EB25F72C1DE0EC1D003372A6 /* AppDelegate.swift */,
 				EB25F72E1DE0EC1D003372A6 /* ViewController.swift */,
+				EBDB89471DE103BC004CC927 /* ProjectCardView.swift */,
+				EBDB894B1DE10D92004CC927 /* ProjectCardTableViewCell.swift */,
+				EBDB894C1DE10D92004CC927 /* ProjectCardTableViewCell.xib */,
 				EB25F7301DE0EC1D003372A6 /* Main.storyboard */,
 				EB25F7331DE0EC1D003372A6 /* Assets.xcassets */,
 				EB25F7351DE0EC1D003372A6 /* LaunchScreen.storyboard */,
@@ -132,9 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB25F7511DE0EC1D003372A6 /* Build configuration list for PBXNativeTarget "GiveMeGreen" */;
 			buildPhases = (
+				A86FFA12A53DFFAF8E957F0A /* [CP] Check Pods Manifest.lock */,
 				EB25F7251DE0EC1D003372A6 /* Sources */,
 				EB25F7261DE0EC1D003372A6 /* Frameworks */,
 				EB25F7271DE0EC1D003372A6 /* Resources */,
+				48CE2DEB670E1C50241B67BB /* [CP] Embed Pods Frameworks */,
+				5C4C1472F0D42CC0F84325F0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB25F7541DE0EC1D003372A6 /* Build configuration list for PBXNativeTarget "GiveMeGreenTests" */;
 			buildPhases = (
+				CF78E677943C92AE39665290 /* [CP] Check Pods Manifest.lock */,
 				EB25F7391DE0EC1D003372A6 /* Sources */,
 				EB25F73A1DE0EC1D003372A6 /* Frameworks */,
 				EB25F73B1DE0EC1D003372A6 /* Resources */,
+				7BE8467D8227E497D7582F04 /* [CP] Embed Pods Frameworks */,
+				0A559477F9765F83FFF80D27 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,15 +241,18 @@
 					EB25F7281DE0EC1D003372A6 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = VNEMB9HYMF;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					EB25F73C1DE0EC1D003372A6 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						TestTargetID = EB25F7281DE0EC1D003372A6;
 					};
 					EB25F7471DE0EC1D003372A6 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						TestTargetID = EB25F7281DE0EC1D003372A6;
 					};
@@ -233,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBDB894E1DE10D92004CC927 /* ProjectCardTableViewCell.xib in Resources */,
 				EB25F7371DE0EC1D003372A6 /* LaunchScreen.storyboard in Resources */,
 				EB25F7341DE0EC1D003372A6 /* Assets.xcassets in Resources */,
 				EB25F7321DE0EC1D003372A6 /* Main.storyboard in Resources */,
@@ -255,13 +306,108 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A559477F9765F83FFF80D27 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GiveMeGreenTests/Pods-GiveMeGreenTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48CE2DEB670E1C50241B67BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GiveMeGreen/Pods-GiveMeGreen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C4C1472F0D42CC0F84325F0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GiveMeGreen/Pods-GiveMeGreen-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BE8467D8227E497D7582F04 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GiveMeGreenTests/Pods-GiveMeGreenTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A86FFA12A53DFFAF8E957F0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CF78E677943C92AE39665290 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EB25F7251DE0EC1D003372A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EB25F72F1DE0EC1D003372A6 /* ViewController.swift in Sources */,
+				EBDB894D1DE10D92004CC927 /* ProjectCardTableViewCell.swift in Sources */,
 				EB25F72D1DE0EC1D003372A6 /* AppDelegate.swift in Sources */,
+				EBDB89481DE103BC004CC927 /* ProjectCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +480,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -384,6 +531,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -411,7 +559,9 @@
 		};
 		EB25F7521DE0EC1D003372A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8CFA391F97A9F683F44A445 /* Pods-GiveMeGreen.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VNEMB9HYMF;
 				INFOPLIST_FILE = GiveMeGreen/Info.plist;
@@ -424,7 +574,9 @@
 		};
 		EB25F7531DE0EC1D003372A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD8532DC5187870A9E72BA16 /* Pods-GiveMeGreen.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VNEMB9HYMF;
 				INFOPLIST_FILE = GiveMeGreen/Info.plist;
@@ -437,6 +589,7 @@
 		};
 		EB25F7551DE0EC1D003372A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D062E7CB62A739CAAAF1A1FE /* Pods-GiveMeGreenTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -451,6 +604,7 @@
 		};
 		EB25F7561DE0EC1D003372A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DE1811A7492FB3B4E4FCCB3 /* Pods-GiveMeGreenTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +662,7 @@
 				EB25F7531DE0EC1D003372A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB25F7541DE0EC1D003372A6 /* Build configuration list for PBXNativeTarget "GiveMeGreenTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +671,7 @@
 				EB25F7561DE0EC1D003372A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB25F7571DE0EC1D003372A6 /* Build configuration list for PBXNativeTarget "GiveMeGreenUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +680,7 @@
 				EB25F7591DE0EC1D003372A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
