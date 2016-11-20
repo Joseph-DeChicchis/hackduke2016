@@ -9,7 +9,9 @@
       "Donated":1.23,
       "Goal":2.78,
       "Start":1478790022,
-      "End":1480086022
+      "End":1480086022,
+		"walletId":"701580f1-0585-5235-8532-b4520ab8027a",
+		"walletName":"solar-roberts"
    },
    "project2": {
       "Name":"Chris White",
@@ -21,7 +23,9 @@
       "Donated":2.89,
       "Goal":14,
       "Start":1478876422,
-      "End":1480172422
+      "End":1480172422,
+		"walletId":"4501ae97-3725-5019-b1ee-8f72a4654dc4",
+		"walletName":"solar-white"
    },
    "project3": {
       "Name":"David Sun",
@@ -33,7 +37,9 @@
       "Donated":0.43,
       "Goal":0.5,
       "Start":1478962822,
-      "End":1480258822
+      "End":1480258822,
+		"walletId":"27fd3f5b-9525-565d-a97f-f46d03747c03",
+		"walletName":"garden-sun"
    },
    "project4": {
       "Name":"Nico Black",
@@ -45,7 +51,9 @@
       "Donated":0.029,
       "Goal":0.078,
       "Start":1480345222,
-      "End":1479049222
+      "End":1479049222,
+		"walletId":"e23ec654-c4af-5e60-a7d6-a35eb4b39d00",
+		"walletName":"aquarium-black"
    },
    "project5": {
       "Name":"Daquan McBoosey",
@@ -57,6 +65,8 @@
       "Donated":1.58,
       "Goal":1.78,
       "Start":1479135953,
-      "End":1480431953
+      "End":1480431953,
+		"walletId":"68174df9-8e27-5b30-809f-bdedf5465d62",
+		"walletName":"recycling-smith"
    }
 }
