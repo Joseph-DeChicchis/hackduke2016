@@ -57,7 +57,7 @@ class ProjectCardView: UIView, UITableViewDelegate, UITableViewDataSource {
         
         self.tableView.reloadData()
         
-        NSLog("setup")
+        //NSLog("setup")
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -72,7 +72,7 @@ class ProjectCardView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        NSLog("cellForRowAt")
+        //NSLog("cellForRowAt")
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ProjectCardTableViewCell
         

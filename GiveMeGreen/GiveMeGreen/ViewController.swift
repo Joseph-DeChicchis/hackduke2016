@@ -14,6 +14,8 @@ import ZLSwipeableViewSwift
 
 class ViewController: UIViewController { //, MDCSwipeToChooseDelegate {
     
+    @IBOutlet var selectionLabel: UILabel!
+    
     var count = -1
     
     let swipeableView = ZLSwipeableView()
@@ -38,6 +40,10 @@ class ViewController: UIViewController { //, MDCSwipeToChooseDelegate {
         }
         swipeableView.loadViews()
         
+        selectionLabel.isHidden = true
+        self.view.bringSubview(toFront: selectionLabel)
+        
+        /*
         swipeableView.didStart = {view, location in
             print("Did start swiping view at location: \(location)")
         }
@@ -46,15 +52,54 @@ class ViewController: UIViewController { //, MDCSwipeToChooseDelegate {
         }
         swipeableView.didEnd = {view, location in
             print("Did end swiping view at location: \(location)")
-        }
+        }*/
         swipeableView.didSwipe = {view, direction, vector in
-            print("Did swipe view in direction: \(direction), vector: \(vector)")
-        }
+            self.notifySelection(direction: "\(direction)")
+            //NSLog("Did swipe view in direction: \(direction), vector: \(vector)")
+        }/*
         swipeableView.didCancel = {view in
             print("Did cancel swiping view")
+        }*/
+        
+        
+    }
+    
+    func notifySelection(direction: String) {
+        if direction == "Up" {
+            selectionLabel.textColor = UIColor.blue
+            
+            selectionLabel.text = "Super Like!"
+        }
+        else if direction == "Right" {
+            selectionLabel.textColor = UIColor.green
+            
+            selectionLabel.text = "Like"
+        }
+        else {
+            selectionLabel.textColor = UIColor.red
+            
+            selectionLabel.text = "Nah"
         }
         
+        selectionLabel.isHidden = false
         
+        selectionLabel.alpha = 0.0
+        
+        UIView.animate(withDuration: 0.25, delay: 0.0, options: [.curveEaseOut], animations: {
+            
+            self.selectionLabel.alpha = 0.75
+            
+        }, completion: { _ in
+            UIView.animate(withDuration: 0.25, delay: 0.0, options: [.curveEaseOut], animations: {
+                
+                self.selectionLabel.alpha = 0.0
+                
+            }, completion: { _ in
+                
+                self.selectionLabel.isHidden = true
+                
+            })
+        })
     }
     
     override func didReceiveMemoryWarning() {

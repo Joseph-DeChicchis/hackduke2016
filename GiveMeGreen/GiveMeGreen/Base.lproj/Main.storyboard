@@ -36,6 +36,12 @@
                                     <action selector="swipeRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eJ5-4p-IQy"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHX-Na-Cof">
+                                <rect key="frame" x="124" y="304" width="128.5" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Sn-6z-DzY">
                                 <rect key="frame" x="169" y="617" width="37" height="30"/>
                                 <state key="normal" title="YES!!"/>
@@ -46,12 +52,14 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="LHX-Na-Cof" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MXD-Kk-FfG"/>
                             <constraint firstItem="Uva-SB-Bma" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="N4w-ng-ltX"/>
                             <constraint firstItem="8Sn-6z-DzY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P5F-9I-ZSj"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9lR-Q7-bAE" secondAttribute="bottom" constant="20" id="h8h-5r-2CX"/>
                             <constraint firstItem="9lR-Q7-bAE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="i5J-1D-WRw"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8Sn-6z-DzY" secondAttribute="bottom" constant="20" id="nBV-CX-uKu"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Uva-SB-Bma" secondAttribute="bottom" constant="20" id="yVU-oQ-6oZ"/>
+                            <constraint firstItem="LHX-Na-Cof" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zm9-1C-Dfg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="GiveMeGreen" id="4dT-d4-4aR">
@@ -66,6 +74,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="selectionLabel" destination="LHX-Na-Cof" id="mBr-r1-jdc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
