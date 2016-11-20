@@ -16,6 +16,8 @@ class Project: NSObject {
     var imageURL = ""
     var totalAmount = 0.0
     var currentAmount = 0.0
+    var bio = ""
+    var projectID = ""
     
     func setup(infoDic: NSDictionary) {
         
@@ -25,6 +27,8 @@ class Project: NSObject {
         imageURL = infoDic.value(forKey: "imageURL") as! String
         totalAmount = infoDic.value(forKey: "totalAmount") as! Double
         currentAmount = infoDic.value(forKey: "currentAmount") as! Double
+        bio = infoDic.value(forKey: "bio") as! String
+        projectID = infoDic.value(forKey: "projectID") as! String
         
     }
     

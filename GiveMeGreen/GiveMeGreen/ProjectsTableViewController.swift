@@ -8,16 +8,88 @@
 
 import UIKit
 
+import Firebase
+
 class ProjectsTableViewController: UITableViewController {
 
+    var uid = ""
+    
+    var emailAddress = ""
+    
+    var userProjects = Array<String>()
+    
+    var projectArray = Array<Project>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
+            if user != nil {
+                // User is signed in.
+                
+                NSLog("signed in")
+                
+                self.emailAddress = user!.email!
+                
+                self.uid = user!.uid
+                
+                let ref = FIRDatabase.database().reference()
+                
+                ref.child("userProjects/\(self.uid)").observeSingleEvent(of: .value, with: { (snapshot) in
+                    
+                    if snapshot.exists() {
+                        
+                        NSLog("userProjects: \(snapshot)")
+                        
+                        self.userProjects = snapshot.value  as! Array<String>
+                        
+                        self.projectArray.removeAll()
+                        
+                        for projectID in self.userProjects {
+                            self.loadProject(projectID: projectID)
+                        }
+                        
+                    }
+                    
+                }) { (error) in
+                    NSLog(error.localizedDescription)
+                }
+                
+            } else {
+                // No user is signed in.
+                
+                NSLog("not signed in", [])
+            }
+        }
+    }
+    
+    func loadProject(projectID: String) {
+        
+        let ref = FIRDatabase.database().reference()
+        
+        ref.child("projects/\(projectID)").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            if snapshot.exists() {
+                
+                NSLog("snapshot: \(snapshot)")
+                
+                let dic = snapshot.value as! NSDictionary
+                let temp = Project()
+                temp.setup(infoDic: ["name": dic.value(forKey: "Name") as! String, "title": dic.value(forKey: "Title") as! String, "walletAddress": dic.value(forKey: "walletId") as! String, "imageURL": dic.value(forKey: "Picture") as! String, "totalAmount": dic.value(forKey: "Goal") as! Double, "currentAmount": dic.value(forKey: "Donated") as! Double, "bio": dic.value(forKey: "Bio") as! String, "projectID": dic.value(forKey: "projectID") as! String])
+                
+                self.projectArray.append(temp)
+                
+                NSLog("rawProjects: \(self.projectArray)")
+                
+                self.tableView.reloadData()
+                
+            }
+            
+        }) { (error) in
+            NSLog(error.localizedDescription)
+        }
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,68 +100,39 @@ class ProjectsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        return projectArray.count
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-        // Configure the cell...
+        cell.textLabel?.text = projectArray[indexPath.row].title
 
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        var request = URLRequest(url: URL(string: "https://hackduke2016.herokuapp.com/fundProject?acct_id=\(projectArray[indexPath.row].walletAddress)&email=\(emailAddress)&amount=1")!)
+        request.httpMethod = "GET"
+        let session = URLSession.shared
+        
+        session.dataTask(with: request) {data, response, err in
+            NSLog("FUND LIKED: \(response)")
+            }.resume()
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    @IBAction func back(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

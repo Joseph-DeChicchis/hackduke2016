@@ -29,6 +29,10 @@
 		EBDB894D1DE10D92004CC927 /* ProjectCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDB894B1DE10D92004CC927 /* ProjectCardTableViewCell.swift */; };
 		EBDB894E1DE10D92004CC927 /* ProjectCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDB894C1DE10D92004CC927 /* ProjectCardTableViewCell.xib */; };
 		EBDB89501DE12F62004CC927 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDB894F1DE12F62004CC927 /* Project.swift */; };
+		EBF8EC0C1DE21B60001A3A7B /* NewProjectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF8EC0B1DE21B60001A3A7B /* NewProjectTableViewController.swift */; };
+		EBF8EC0F1DE21CFB001A3A7B /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF8EC0E1DE21CFB001A3A7B /* TitleTableViewCell.swift */; };
+		EBF8EC111DE21D04001A3A7B /* BioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF8EC101DE21D04001A3A7B /* BioTableViewCell.swift */; };
+		EBF8EC131DE21D0F001A3A7B /* GoalAmountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF8EC121DE21D0F001A3A7B /* GoalAmountTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,10 @@
 		EBDB894B1DE10D92004CC927 /* ProjectCardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCardTableViewCell.swift; sourceTree = "<group>"; };
 		EBDB894C1DE10D92004CC927 /* ProjectCardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectCardTableViewCell.xib; sourceTree = "<group>"; };
 		EBDB894F1DE12F62004CC927 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		EBF8EC0B1DE21B60001A3A7B /* NewProjectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewProjectTableViewController.swift; sourceTree = "<group>"; };
+		EBF8EC0E1DE21CFB001A3A7B /* TitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		EBF8EC101DE21D04001A3A7B /* BioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BioTableViewCell.swift; sourceTree = "<group>"; };
+		EBF8EC121DE21D0F001A3A7B /* GoalAmountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalAmountTableViewCell.swift; sourceTree = "<group>"; };
 		FD8532DC5187870A9E72BA16 /* Pods-GiveMeGreen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiveMeGreen.release.xcconfig"; path = "Pods/Target Support Files/Pods-GiveMeGreen/Pods-GiveMeGreen.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +167,8 @@
 				EB25F72E1DE0EC1D003372A6 /* ViewController.swift */,
 				EBD17C581DE2023900920E48 /* ProjectsTableViewController.swift */,
 				EBD17C5A1DE2024300920E48 /* ProfileTableViewController.swift */,
+				EBF8EC0B1DE21B60001A3A7B /* NewProjectTableViewController.swift */,
+				EBF8EC0D1DE21BC9001A3A7B /* New Project Cells */,
 				EBDB89471DE103BC004CC927 /* ProjectCardView.swift */,
 				EBDB894B1DE10D92004CC927 /* ProjectCardTableViewCell.swift */,
 				EBDB894F1DE12F62004CC927 /* Project.swift */,
@@ -202,6 +212,16 @@
 				EB501AB31DE1F187006A5550 /* ButtonsTableViewCell.swift */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		EBF8EC0D1DE21BC9001A3A7B /* New Project Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EBF8EC0E1DE21CFB001A3A7B /* TitleTableViewCell.swift */,
+				EBF8EC101DE21D04001A3A7B /* BioTableViewCell.swift */,
+				EBF8EC121DE21D0F001A3A7B /* GoalAmountTableViewCell.swift */,
+			);
+			name = "New Project Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,14 +467,18 @@
 				EB501AB01DE1F16A006A5550 /* EmailTableViewCell.swift in Sources */,
 				EB25F72F1DE0EC1D003372A6 /* ViewController.swift in Sources */,
 				EBDB894D1DE10D92004CC927 /* ProjectCardTableViewCell.swift in Sources */,
+				EBF8EC131DE21D0F001A3A7B /* GoalAmountTableViewCell.swift in Sources */,
 				EB501AA91DE1EE17006A5550 /* CheckSignedInViewController.swift in Sources */,
 				EB25F72D1DE0EC1D003372A6 /* AppDelegate.swift in Sources */,
+				EBF8EC0C1DE21B60001A3A7B /* NewProjectTableViewController.swift in Sources */,
 				EB501AAB1DE1EE29006A5550 /* SignInTableViewController.swift in Sources */,
 				EBDB89501DE12F62004CC927 /* Project.swift in Sources */,
 				EBD17C5B1DE2024300920E48 /* ProfileTableViewController.swift in Sources */,
+				EBF8EC0F1DE21CFB001A3A7B /* TitleTableViewCell.swift in Sources */,
 				EB501AAE1DE1F160006A5550 /* NameTableViewCell.swift in Sources */,
 				EB501AB41DE1F187006A5550 /* ButtonsTableViewCell.swift in Sources */,
 				EBDB89481DE103BC004CC927 /* ProjectCardView.swift in Sources */,
+				EBF8EC111DE21D04001A3A7B /* BioTableViewCell.swift in Sources */,
 				EBD17C591DE2023900920E48 /* ProjectsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

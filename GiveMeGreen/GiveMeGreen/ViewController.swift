@@ -24,6 +24,14 @@ class ViewController: UIViewController {
     
     var rawProjects = Array<AnyObject>()
     
+    var emailAddress = ""
+    
+    var uid = ""
+    
+    var userProjects = Array<String>()
+    
+    var swipeCount = -1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -32,34 +40,52 @@ class ViewController: UIViewController {
         
         swipeableView.frame = CGRect(x: 20, y: 80, width: self.view.frame.width - 40, height: self.view.frame.height - 175)
         view.addSubview(swipeableView)
-        /*
-        swipeableView.numberOfActiveView = 2
-        swipeableView.nextView = {
-            NSLog("nextView")
-            if self.count >= self.projectArray.count {
-                self.count = 0
+        
+        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
+            if user != nil {
+                // User is signed in.
+                
+                NSLog("signed in")
+                
+                self.emailAddress = user!.email!
+                
+                self.uid = user!.uid
+                
+                let ref = FIRDatabase.database().reference()
+                
+                ref.child("userProjects/\(self.uid)").observeSingleEvent(of: .value, with: { (snapshot) in
+                    
+                    if snapshot.exists() {
+                        
+                        NSLog("userProjects: \(snapshot)")
+                        
+                        self.userProjects = snapshot.value  as! Array<String>
+                        
+                    }
+                    
+                }) { (error) in
+                    NSLog(error.localizedDescription)
+                }
+                
+            } else {
+                // No user is signed in.
+                
+                NSLog("not signed in", [])
+                
+                self.emailAddress = ""
             }
-            
-            if self.projectArray.count == 0 {
-                self.count += 1
-                return UIView()
-            }
-            
-            let view = ProjectCardView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width - 40, height: self.view.frame.height - 175))
-            NSLog("Create view: \(self.count)")
-            
-            view.setProject(project: self.projectArray[self.count])
-            
-            self.count += 1
-            return view
         }
-        swipeableView.loadViews()*/
- 
+        
         selectionLabel.isHidden = true
         self.view.bringSubview(toFront: selectionLabel)
         
         swipeableView.didSwipe = {view, direction, vector in
+            
+            self.swipeCount = self.swipeCount + 1
+            
             self.notifySelection(direction: "\(direction)")
+            
+            self.handleSwipe(direction: "\(direction)", index: self.swipeCount % self.projectArray.count)
         }
         
         let ref = FIRDatabase.database().reference()
@@ -77,6 +103,7 @@ class ViewController: UIViewController {
         }) { (error) in
             NSLog(error.localizedDescription)
         }
+
         
     }
     
@@ -98,7 +125,7 @@ class ViewController: UIViewController {
         for project: AnyObject in rawProjects {
             let dic = project as! NSDictionary
             let temp = Project()
-            temp.setup(infoDic: ["name": dic.value(forKey: "Name") as! String, "title": dic.value(forKey: "Title") as! String, "walletAddress": "walletAddress", "imageURL": dic.value(forKey: "Picture") as! String, "totalAmount": dic.value(forKey: "Goal") as! Double, "currentAmount": dic.value(forKey: "Donated") as! Double])
+            temp.setup(infoDic: ["name": dic.value(forKey: "Name") as! String, "title": dic.value(forKey: "Title") as! String, "walletAddress": dic.value(forKey: "walletId") as! String, "imageURL": dic.value(forKey: "Picture") as! String, "totalAmount": dic.value(forKey: "Goal") as! Double, "currentAmount": dic.value(forKey: "Donated") as! Double, "bio": dic.value(forKey: "Bio") as! String, "projectID": dic.value(forKey: "projectID") as! String])
             
             projectArray.append(temp)
         }
@@ -171,16 +198,40 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func handleSwipe(direction: String, index: Int) {
+        if direction == "Up" {
+            var request = URLRequest(url: URL(string: "https://hackduke2016.herokuapp.com/fundProject?acct_id=\(projectArray[index].walletAddress)&email=\(emailAddress)&amount=1")!)
+            request.httpMethod = "GET"
+            let session = URLSession.shared
+            
+            session.dataTask(with: request) {data, response, err in
+                NSLog("SUPERLIKE: \(response)")
+                }.resume()
+        }
+        else if direction == "Right" {
+            
+            if !userProjects.contains(projectArray[index].projectID) {
+                userProjects.append(projectArray[index].projectID)
+                
+                let ref = FIRDatabase.database().reference()
+                
+                ref.child("userProjects/\(uid)").setValue(userProjects)
+            }
+        }
+    }
+    
     @IBAction func swipeLeft(_ sender: Any) {
         swipeableView.swipeTopView(inDirection: .Left)
     }
     
     @IBAction func swipeRight(_ sender: Any) {
         swipeableView.swipeTopView(inDirection: .Right)
+        
     }
     
     @IBAction func superLike(_ sender: Any) {
         swipeableView.swipeTopView(inDirection: .Up)
+        
     }
     
 }

@@ -11,10 +11,6 @@ import UIKit
 import Firebase
 
 class CheckSignedInViewController: UIViewController {
-
-    var openSignupFirstCall = true
-    
-    var firstCall = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,29 +34,17 @@ class CheckSignedInViewController: UIViewController {
                 // User is signed in.
                 NSLog("signed in")
                 
-                self.openSignupFirstCall = true
-                
-                if self.firstCall == true {
-                    
-                    self.firstCall = false
-                    
-                    let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let viewController = mainStoryboard.instantiateViewController(withIdentifier: "SignedInWindow") as! UINavigationController
-                    UIApplication.shared.keyWindow?.rootViewController = viewController
-                }
+                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let viewController = mainStoryboard.instantiateViewController(withIdentifier: "SignedInWindow") as! UINavigationController
+                UIApplication.shared.keyWindow?.rootViewController = viewController
                 
             } else {
                 // No user is signed in.
                 NSLog("not signed in", [])
                 
-                if self.openSignupFirstCall == true {
-                    
-                    self.openSignupFirstCall = false
-                    
-                    let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let viewController = mainStoryboard.instantiateViewController(withIdentifier: "SignInWindow") as! UINavigationController
-                    UIApplication.shared.keyWindow?.rootViewController = viewController
-                }
+                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let viewController = mainStoryboard.instantiateViewController(withIdentifier: "SignInWindow") as! UINavigationController
+                UIApplication.shared.keyWindow?.rootViewController = viewController
             }
         }
 

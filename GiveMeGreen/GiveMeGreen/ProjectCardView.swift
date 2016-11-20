@@ -116,6 +116,10 @@ class ProjectCardView: UIView, UITableViewDelegate, UITableViewDataSource {
         
         cell.projectImageView.image = image
         
+        cell.projectImageView.clipsToBounds = true
+        
+        cell.bioLabel.text = cardProject.bio
+        
         return cell
         
     }

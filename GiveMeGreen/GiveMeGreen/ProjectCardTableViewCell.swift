@@ -20,6 +20,8 @@ class ProjectCardTableViewCell: UITableViewCell {
     
     @IBOutlet var fundedProgressbar: UIProgressView!
     
+    @IBOutlet var bioLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
