@@ -9,7 +9,9 @@
 		"Donated": "1000.0",
 		"Goal": "1000.0",
 		"Start": "11/9/16",
-		"End": "11/23/16"
+		"End": "11/23/16",
+		"walletId":"701580f1-0585-5235-8532-b4520ab8027a",
+		"walletName":"solar-roberts"
 	},
 	{
 		"Name": "Chris White",
@@ -21,7 +23,9 @@
 		"Donated": "900.0",
 		"Goal": "10000.0",
 		"Start": "11/10/16",
-		"End": "11/24/16"
+		"End": "11/24/16",
+		"walletId":"4501ae97-3725-5019-b1ee-8f72a4654dc4",
+		"walletName":"solar-white"
 	},
 	{
 		"Name": "David Sun",
@@ -33,7 +37,9 @@
 		"Donated": "400.0",
 		"Goal": "350.0",
 		"Start": "11/11/16",
-		"End": "11/25/16"
+		"End": "11/25/16",
+		"walletId":"27fd3f5b-9525-565d-a97f-f46d03747c03",
+		"walletName":"garden-sun"
 	},
 	{
 		"Name": "Nico Black",
@@ -45,7 +51,9 @@
 		"Donated": "40.0",
 		"Goal": "10.0",
 		"Start": "11/12/16",
-		"End": "11/27/16"
+		"End": "11/27/16",
+		"walletId":"e23ec654-c4af-5e60-a7d6-a35eb4b39d00",
+		"walletName":"aquarium-black"
 	},
 	{
 		"Name": "John Smith",
@@ -57,6 +65,8 @@
 		"Donated": "4.0",
 		"Goal": "0.5",
 		"Start": "11/13/16",
-		"End": "11/27/16"
+		"End": "11/27/16",
+		"walletId":"68174df9-8e27-5b30-809f-bdedf5465d62",
+		"walletName":"recycling-smith"
 	}
 ]
