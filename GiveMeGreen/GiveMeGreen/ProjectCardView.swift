@@ -8,9 +8,15 @@
 
 import UIKit
 
+import Firebase
+
 class ProjectCardView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     var tableView = UITableView()
+    
+    var cardProject = Project()
+    
+    var image = UIImage()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -60,6 +66,29 @@ class ProjectCardView: UIView, UITableViewDelegate, UITableViewDataSource {
         //NSLog("setup")
     }
     
+    func setProject(project: Project) {
+        
+        cardProject = project
+        
+        tableView.reloadData()
+        
+        let imageRef = FIRStorage.storage().reference(forURL: cardProject.imageURL)
+        
+        imageRef.data(withMaxSize: 10000000) { (data, error) -> Void in
+            if (error != nil) {
+                NSLog((error?.localizedDescription)!)
+            } else {
+                
+                if data != nil {
+                    self.image = UIImage(data: data!)!
+                    
+                    self.tableView.reloadData()
+                }
+                
+            }
+        }
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
@@ -77,6 +106,15 @@ class ProjectCardView: UIView, UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ProjectCardTableViewCell
         
         cell.selectionStyle = .none
+        
+        cell.titleLabel.text = cardProject.title
+        cell.nameLabel.text = cardProject.name
+        
+        cell.fundedLabel.text = "$\(cardProject.currentAmount) of $\(cardProject.totalAmount) funded"
+        
+        cell.fundedProgressbar.setProgress(Float(Double(cardProject.currentAmount) / Double(cardProject.totalAmount)), animated: false)
+        
+        cell.projectImageView.image = image
         
         return cell
         

@@ -16,9 +16,19 @@
 		EB25F7371DE0EC1D003372A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB25F7351DE0EC1D003372A6 /* LaunchScreen.storyboard */; };
 		EB25F7421DE0EC1D003372A6 /* GiveMeGreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB25F7411DE0EC1D003372A6 /* GiveMeGreenTests.swift */; };
 		EB25F74D1DE0EC1D003372A6 /* GiveMeGreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB25F74C1DE0EC1D003372A6 /* GiveMeGreenUITests.swift */; };
+		EB501AA71DE1EC55006A5550 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB501AA61DE1EC55006A5550 /* GoogleService-Info.plist */; };
+		EB501AA91DE1EE17006A5550 /* CheckSignedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB501AA81DE1EE17006A5550 /* CheckSignedInViewController.swift */; };
+		EB501AAB1DE1EE29006A5550 /* SignInTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB501AAA1DE1EE29006A5550 /* SignInTableViewController.swift */; };
+		EB501AAE1DE1F160006A5550 /* NameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB501AAD1DE1F160006A5550 /* NameTableViewCell.swift */; };
+		EB501AB01DE1F16A006A5550 /* EmailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB501AAF1DE1F16A006A5550 /* EmailTableViewCell.swift */; };
+		EB501AB21DE1F179006A5550 /* PasswordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB501AB11DE1F179006A5550 /* PasswordTableViewCell.swift */; };
+		EB501AB41DE1F187006A5550 /* ButtonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB501AB31DE1F187006A5550 /* ButtonsTableViewCell.swift */; };
+		EBD17C591DE2023900920E48 /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD17C581DE2023900920E48 /* ProjectsTableViewController.swift */; };
+		EBD17C5B1DE2024300920E48 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD17C5A1DE2024300920E48 /* ProfileTableViewController.swift */; };
 		EBDB89481DE103BC004CC927 /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDB89471DE103BC004CC927 /* ProjectCardView.swift */; };
 		EBDB894D1DE10D92004CC927 /* ProjectCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDB894B1DE10D92004CC927 /* ProjectCardTableViewCell.swift */; };
 		EBDB894E1DE10D92004CC927 /* ProjectCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDB894C1DE10D92004CC927 /* ProjectCardTableViewCell.xib */; };
+		EBDB89501DE12F62004CC927 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDB894F1DE12F62004CC927 /* Project.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,9 +67,19 @@
 		EB25F7481DE0EC1D003372A6 /* GiveMeGreenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiveMeGreenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB25F74C1DE0EC1D003372A6 /* GiveMeGreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiveMeGreenUITests.swift; sourceTree = "<group>"; };
 		EB25F74E1DE0EC1D003372A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB501AA61DE1EC55006A5550 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EB501AA81DE1EE17006A5550 /* CheckSignedInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckSignedInViewController.swift; sourceTree = "<group>"; };
+		EB501AAA1DE1EE29006A5550 /* SignInTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInTableViewController.swift; sourceTree = "<group>"; };
+		EB501AAD1DE1F160006A5550 /* NameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameTableViewCell.swift; sourceTree = "<group>"; };
+		EB501AAF1DE1F16A006A5550 /* EmailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailTableViewCell.swift; sourceTree = "<group>"; };
+		EB501AB11DE1F179006A5550 /* PasswordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordTableViewCell.swift; sourceTree = "<group>"; };
+		EB501AB31DE1F187006A5550 /* ButtonsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsTableViewCell.swift; sourceTree = "<group>"; };
+		EBD17C581DE2023900920E48 /* ProjectsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewController.swift; sourceTree = "<group>"; };
+		EBD17C5A1DE2024300920E48 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		EBDB89471DE103BC004CC927 /* ProjectCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
 		EBDB894B1DE10D92004CC927 /* ProjectCardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCardTableViewCell.swift; sourceTree = "<group>"; };
 		EBDB894C1DE10D92004CC927 /* ProjectCardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProjectCardTableViewCell.xib; sourceTree = "<group>"; };
+		EBDB894F1DE12F62004CC927 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		FD8532DC5187870A9E72BA16 /* Pods-GiveMeGreen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiveMeGreen.release.xcconfig"; path = "Pods/Target Support Files/Pods-GiveMeGreen/Pods-GiveMeGreen.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,13 +157,20 @@
 			children = (
 				EB25F72C1DE0EC1D003372A6 /* AppDelegate.swift */,
 				EB25F72E1DE0EC1D003372A6 /* ViewController.swift */,
+				EBD17C581DE2023900920E48 /* ProjectsTableViewController.swift */,
+				EBD17C5A1DE2024300920E48 /* ProfileTableViewController.swift */,
 				EBDB89471DE103BC004CC927 /* ProjectCardView.swift */,
 				EBDB894B1DE10D92004CC927 /* ProjectCardTableViewCell.swift */,
+				EBDB894F1DE12F62004CC927 /* Project.swift */,
 				EBDB894C1DE10D92004CC927 /* ProjectCardTableViewCell.xib */,
 				EB25F7301DE0EC1D003372A6 /* Main.storyboard */,
+				EB501AA81DE1EE17006A5550 /* CheckSignedInViewController.swift */,
+				EB501AAA1DE1EE29006A5550 /* SignInTableViewController.swift */,
+				EB501AAC1DE1F14C006A5550 /* Cells */,
 				EB25F7331DE0EC1D003372A6 /* Assets.xcassets */,
 				EB25F7351DE0EC1D003372A6 /* LaunchScreen.storyboard */,
 				EB25F7381DE0EC1D003372A6 /* Info.plist */,
+				EB501AA61DE1EC55006A5550 /* GoogleService-Info.plist */,
 			);
 			path = GiveMeGreen;
 			sourceTree = "<group>";
@@ -164,6 +191,17 @@
 				EB25F74E1DE0EC1D003372A6 /* Info.plist */,
 			);
 			path = GiveMeGreenUITests;
+			sourceTree = "<group>";
+		};
+		EB501AAC1DE1F14C006A5550 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EB501AAD1DE1F160006A5550 /* NameTableViewCell.swift */,
+				EB501AAF1DE1F16A006A5550 /* EmailTableViewCell.swift */,
+				EB501AB11DE1F179006A5550 /* PasswordTableViewCell.swift */,
+				EB501AB31DE1F187006A5550 /* ButtonsTableViewCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +323,7 @@
 			files = (
 				EBDB894E1DE10D92004CC927 /* ProjectCardTableViewCell.xib in Resources */,
 				EB25F7371DE0EC1D003372A6 /* LaunchScreen.storyboard in Resources */,
+				EB501AA71DE1EC55006A5550 /* GoogleService-Info.plist in Resources */,
 				EB25F7341DE0EC1D003372A6 /* Assets.xcassets in Resources */,
 				EB25F7321DE0EC1D003372A6 /* Main.storyboard in Resources */,
 			);
@@ -404,10 +443,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB501AB21DE1F179006A5550 /* PasswordTableViewCell.swift in Sources */,
+				EB501AB01DE1F16A006A5550 /* EmailTableViewCell.swift in Sources */,
 				EB25F72F1DE0EC1D003372A6 /* ViewController.swift in Sources */,
 				EBDB894D1DE10D92004CC927 /* ProjectCardTableViewCell.swift in Sources */,
+				EB501AA91DE1EE17006A5550 /* CheckSignedInViewController.swift in Sources */,
 				EB25F72D1DE0EC1D003372A6 /* AppDelegate.swift in Sources */,
+				EB501AAB1DE1EE29006A5550 /* SignInTableViewController.swift in Sources */,
+				EBDB89501DE12F62004CC927 /* Project.swift in Sources */,
+				EBD17C5B1DE2024300920E48 /* ProfileTableViewController.swift in Sources */,
+				EB501AAE1DE1F160006A5550 /* NameTableViewCell.swift in Sources */,
+				EB501AB41DE1F187006A5550 /* ButtonsTableViewCell.swift in Sources */,
 				EBDB89481DE103BC004CC927 /* ProjectCardView.swift in Sources */,
+				EBD17C591DE2023900920E48 /* ProjectsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

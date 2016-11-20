@@ -77,6 +77,13 @@
                     <constraint firstItem="9jz-7o-07R" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zaB-BU-k2v"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="fundedLabel" destination="jeE-fI-Z3e" id="Sps-2m-Z0I"/>
+                <outlet property="fundedProgressbar" destination="RLS-zT-MLm" id="9Oy-gP-5ci"/>
+                <outlet property="nameLabel" destination="W3B-ml-rE4" id="X9b-aC-1YF"/>
+                <outlet property="projectImageView" destination="9jz-7o-07R" id="amE-s9-PZT"/>
+                <outlet property="titleLabel" destination="xpk-vh-5rR" id="HRg-gB-aTe"/>
+            </connections>
             <point key="canvasLocation" x="34" y="238.5"/>
         </tableViewCell>
     </objects>

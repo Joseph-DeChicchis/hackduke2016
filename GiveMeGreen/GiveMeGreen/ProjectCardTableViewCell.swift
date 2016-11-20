@@ -10,6 +10,16 @@ import UIKit
 
 class ProjectCardTableViewCell: UITableViewCell {
 
+    @IBOutlet var titleLabel: UILabel!
+    
+    @IBOutlet var fundedLabel: UILabel!
+    
+    @IBOutlet var nameLabel: UILabel!
+    
+    @IBOutlet var projectImageView: UIImageView!
+    
+    @IBOutlet var fundedProgressbar: UIProgressView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
