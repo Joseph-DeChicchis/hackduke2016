@@ -1,6 +1,6 @@
 # hackduke2016
 
-This is the front end code (iOS app) for a project at HackDuke 2016 called GiveMeGreen. We won the Coinbase sponsored Best use of the Bitcoin or Ethereum blockchains APi prize.
+This is the frontend code (iOS app) for a project at HackDuke 2016 called GiveMeGreen. We won the Coinbase sponsored Best use of the Bitcoin or Ethereum blockchains APi prize.
 
 DevPost linked here:
 https://devpost.com/software/givemegreen
